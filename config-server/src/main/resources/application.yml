@@ -1,0 +1,21 @@
+server:
+  port: 8097
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/yezhimincxvxb/springcloud/
+          searchPaths: config
+          username:
+          password:
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8090/eureka/
+

@@ -1,0 +1,41 @@
+### ribbon负载断路
+
+### 依赖
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+</dependency>
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>
+</dependency>
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+</dependency>// 该依赖在spring-cloud-starter-netflix-eureka-client中已包含，所以可以不用添加
+
+### Application类
+@EnableEurekaClient
+
+### application.yml
+server:
+  port: 8094
+
+spring:
+  application:
+    name: service-ribbon
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8088/eureka/
+
+### config
+
+### 熔断功能
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+</dependency>
+
+@EnableHystrix
