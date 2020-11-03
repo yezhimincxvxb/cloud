@@ -8,6 +8,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="config-client" />
         <module name="config-server" />
+        <module name="dashboard-ha" />
+        <module name="dashboard-hi" />
+        <module name="dashboard-turbine" />
         <module name="eureka-server" />
         <module name="service-feign" />
         <module name="service-hi" />
@@ -22,6 +25,9 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="config-client" options="-parameters" />
       <module name="config-server" options="-parameters" />
+      <module name="dashboard-ha" options="-parameters" />
+      <module name="dashboard-hi" options="-parameters" />
+      <module name="dashboard-turbine" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
       <module name="service-feign" options="-parameters" />
       <module name="service-hi" options="-parameters" />
