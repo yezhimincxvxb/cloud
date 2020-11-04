@@ -12,6 +12,8 @@
         <module name="dashboard-hi" />
         <module name="dashboard-turbine" />
         <module name="eureka-server" />
+        <module name="gateway-hi" />
+        <module name="gateway_a" />
         <module name="service-feign" />
         <module name="service-hi" />
         <module name="service-ribbon" />
@@ -20,6 +22,9 @@
         <module name="zipkin-hi" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="gateway_01" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -29,6 +34,9 @@
       <module name="dashboard-hi" options="-parameters" />
       <module name="dashboard-turbine" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
+      <module name="gateway-hi" options="-parameters" />
+      <module name="gateway_01" options="-parameters" />
+      <module name="gateway_a" options="-parameters" />
       <module name="service-feign" options="-parameters" />
       <module name="service-hi" options="-parameters" />
       <module name="service-ribbon" options="-parameters" />

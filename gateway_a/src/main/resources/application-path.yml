@@ -1,0 +1,23 @@
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          # 启动根据服务ID访问，服务ID必须小写
+          lowerCaseServiceId: true
+          enabled: true
+      routes:
+        - id: path_route2
+          uri: http://localhost:8020
+          predicates:
+            - Path=/a
+        # 访问 localhost:8021/a 时，会路由到 localhost:8020/a
+        - id: path_route
+          uri: lb://gateway-hi # 跳转服务用 lb
+          predicates:
+            - Path=/gateway-hi/*
+          filters:
+            - StripPrefix=1 # 以“/”为界，去除第一个参数即gateway-hi
+        # 访问 localhost:8021/gateway-hi/hi 时，会路由到 localhost:8020/hi
+
+

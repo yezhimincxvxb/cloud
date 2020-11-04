@@ -17,7 +17,14 @@
         <option value="$PROJECT_DIR$/dashboard-hi/pom.xml" />
         <option value="$PROJECT_DIR$/dashboard-ha/pom.xml" />
         <option value="$PROJECT_DIR$/dashboard-turbine/pom.xml" />
+        <option value="$PROJECT_DIR$/gateway_a/pom.xml" />
+        <option value="$PROJECT_DIR$/gateway-hi/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/gateway_01/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
